@@ -13,3 +13,5 @@ const Timer = () => {
     </div>
   );
 };
+
+export default Timer;
