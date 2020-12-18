@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
 import './Timer.css';
 
+import btnCloseSvg from '../../assets/svg/btnCloseSvg';
+
 const Timer = () => {
   const initialState = {};
   const [timer, setTimer] = useState(initialState);
 
   return (
-    <div class="timer">
+    <div className="timer">
       23:23:23
-      <div class="timer__btn-wrapper">
-        <button class="timer__close-btn btn">x</button>
+      <div className="timer__btn-wrapper">
+        <button className="timer__close-btn btn">{btnCloseSvg}</button>
       </div>
     </div>
   );
