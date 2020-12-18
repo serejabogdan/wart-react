@@ -1,6 +1,6 @@
 .timer {
   max-width: 470px;
-  padding: 20px 10px;
+  padding: 20px 0;
 
   display: flex;
   justify-content: center;
@@ -19,6 +19,8 @@
   position: relative;
   margin-left: -15px;
   transition: 0.3s;
+
+  cursor: pointer;
 }
 
 @media (max-width: 510px) {
@@ -31,7 +33,7 @@
 
 @media (min-width: 1440px) {
   .timer {
-    padding: 40px 100px;
+    padding: 40px;
     font-size: 100px;
   }
 }
@@ -63,4 +65,20 @@
   font-size: 18px;
 
   fill: white;
+}
+
+.timer__minutes {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer__minutes input {
+  display: block;
+  width: 115px;
+  border: 0;
+  background: none;
+
+  font-family: Arial;
+  font-size: 100px;
+  color: white;
 }
