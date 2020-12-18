@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './Timer.css';
 
 const Timer = () => {
   const initialState = {};
