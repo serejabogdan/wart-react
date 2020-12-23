@@ -67,18 +67,43 @@
   fill: white;
 }
 
-.timer__minutes {
+.timer__input-time {
   display: flex;
   flex-direction: column;
+
+  overflow: hidden;
 }
 
-.timer__minutes input {
-  display: block;
-  width: 115px;
-  border: 0;
+.timer__input-time {
+  border: none;
   background: none;
+  outline: none;
 
   font-family: Arial;
-  font-size: 100px;
+  font-size: 25px;
   color: white;
+  text-align: right;
+  opacity: 0;
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.timer__focus-border {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  transition: 0.2s;
+}
+
+.timer__input-time:focus + .timer__focus-border {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
