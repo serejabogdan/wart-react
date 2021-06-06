@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './Timer.scss';
 
-import btnCloseSvg from '../../assets/svg/btnCloseSvg';
+import btnCloseSvg from '@assets/svg/btnCloseSvg';
 
 const Timer = () => {
-  const initialState = {isPlay: false, minutes: 23, seconds: 23};
+  const initialState = {isPlay: false, minutes: 23, seconds: 59};
   const [timer, setTimer] = useState(initialState);
 
   const onChangeMinutes = (e) => {
@@ -25,7 +25,7 @@ const Timer = () => {
           value={timer.minutes}
         />
       </div>
-      :<span className='timer__seconds'>23</span>
+      :<span className='timer__seconds'>{timer.seconds}</span>
       <div className='timer__btn-wrapper'>
         {timer.isPlay && <button className='timer__close-btn btn'>{btnCloseSvg}</button>}
       </div>
