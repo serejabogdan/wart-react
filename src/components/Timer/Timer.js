@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Timer.css';
+import './Timer.scss';
 
 import btnCloseSvg from '../../assets/svg/btnCloseSvg';
 
@@ -16,8 +16,8 @@ const Timer = () => {
   };
 
   return (
-    <div className="timer">
-      <div className="timer__minutes">
+    <div className='timer'>
+      <div className='timer__minutes'>
         <input
           contentEditable={!timer.isPlay}
           suppressContentEditableWarning={true}
@@ -25,9 +25,9 @@ const Timer = () => {
           value={timer.minutes}
         />
       </div>
-      :<span className="timer__seconds">23</span>
-      <div className="timer__btn-wrapper">
-        {timer.isPlay && <button className="timer__close-btn btn">{btnCloseSvg}</button>}
+      :<span className='timer__seconds'>23</span>
+      <div className='timer__btn-wrapper'>
+        {timer.isPlay && <button className='timer__close-btn btn'>{btnCloseSvg}</button>}
       </div>
     </div>
   );
