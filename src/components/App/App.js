@@ -1,5 +1,5 @@
 import React from 'react';
-import Timer from './components/Timer/Timer';
+import Timer from '../Timer';
 import './App.scss';
 
 function App() {
